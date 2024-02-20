@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<style>*
+
+:root {
+    --clr1: rgb(21, 12, 104);
+    --clr2: rgb(236, 68, 90);
+    --clr3: #fff;
+    --clr4: #000;
+    --clr5: lightgray;
+    --clr6: yellow;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'PT Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 56%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--clr1);
+}
+
+section {
+    padding: 7rem 9%;
+    margin-top: 7rem;
+}
+
+section h3 {
+    font-size: 3rem;
+    color: var(--clr2);
+    text-transform: none;
+    text-align: center;
+    letter-spacing: .2rem;
+}
+
+section p {
+    color: var(--clr3);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    line-height: 2.5rem;
+    justify-content: flex-start;
+}
+
+section h4 {
+    margin: 0 0 1rem 30rem;
+    width: 40%;
+    font-size: 4rem;
+    color: var(--clr3);
+    text-transform: uppercase;
+    text-align: center;
+    align-items: center;
+    letter-spacing: .2rem;
+    background: var(--clr1);
+}
+
+.btn {
+    margin-top: 2rem;
+    padding: 1.3rem 4rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    color: var(--clr3);
+    background-color:rgb(255, 0, 0);
+    border: none;
+    box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    border-radius: 12px;
+}
+
+.btn:hover {
+    transform: translateY(-1rem);
+    transition: all .5s ease;
+}
+
+.title {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: .2rem;
+}
+
+.title span {
+    color: var(--clr2);
+    font-size: 4rem;
+}
+
+.title p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color:white;
+}
+
+
+/*----------------------header section---------------*/
+
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background:rgb(59, 59, 139);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.head .logo {
+    font-size: 2.5rem;
+    color: var(--clr3);
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+
+span {
+    color: var(--clr5);
+    font-size: 2.5rem;
+}
+
+.head .navbar {
+    font-size: 1.8rem;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.head .navbar a {
+    padding-left: 1.5rem;
+    color: var(--clr3);
+}
+#menu-bar {
+    display: none;
+    color:rgb(213, 22, 159);
+}
+body{
+
+  font-family: 'Poppins', sans-serif;
+  height:100vh;
+  width:100vw;
+  background-color: #f3eef2;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.card{
+  background: #fdf7f7;
+  width: 900px;
+  min-height: 400px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  display: flex;
+  
+
+}
+
+.form,
+.image{
+  width: 50%;
+}
+
+.image{
+background-image: url('login image.jpg');
+background-size:cover;
+background-position:center;
+
+  
+}
+
+.overlay h3{
+  color:rgb(199, 151, 151);
+  letter-spacing: 1px;
+  font-size: 25px;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+
+.form{
+  padding: 60px 25px; 
+  display: flex;
+  flex-direction: column;
+  
+}
+.form h3{
+  font-size: 28px;
+  font-weight: 500;
+  position:center;
+  margin-bottom: 30px;
+}
+.form h3::after{
+  content: '';
+  width:30px;
+  height:3px;
+  background: #7227D5;
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  border-radius: 5px;
+  
+}
+
+.fa{
+  color: #7227D5;
+  position: absolute;
+  top:10px;
+  font-size: 18px;
+}
+
+.input-field{
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+}
+.input-field input{
+  display: block; 
+  width: 100%;
+  padding: 10px 30px;
+  outline: none;
+  border:none;
+  border-bottom: 2px solid rgb(237, 236, 236);
+  font-size: 15px;
+}
+
+.form>a{
+  color:#7227D5;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 35px
+}
+
+button{
+  height: 45px;
+  background:#7227D5;
+  border:none;
+  color:white;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+button+p{
+  text-align: center;
+  padding-top: 30px;
+  font-size: 14px;
+}
+
+button+p a{
+  text-decoration: none;
+  color:#7227D5;
+  font-weight: 500;
+}
+
+input::placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+/*----------------------header section---------------*/
+
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background:rgb(59, 59, 139);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.head .logo {
+    font-size: 2.5rem;
+    color: var(--clr3);
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+
+span {
+    color: var(--clr5);
+    font-size: 2.5rem;
+}
+
+.head .navbar {
+    font-size: 1.8rem;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.head .navbar a {
+    padding-left: 1.5rem;
+    color:white;
+}
+
+#menu-bar {
+    display: none;
+    color:rgb(213, 22, 159);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'PT Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 56%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--clr1);
+}
+
+section {
+    padding: 7rem 9%;
+    margin-top: 7rem;
+}
+
+section h3 {
+    font-size: 3rem;
+    color: var(--clr2);
+    text-transform: none;
+    text-align: center;
+    letter-spacing: .2rem;
+}
+
+section p {
+    color: var(--clr3);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    line-height: 2.5rem;
+    justify-content: flex-start;
+}
+
+section h4 {
+    margin: 0 0 1rem 30rem;
+    width: 40%;
+    font-size: 4rem;
+    color: var(--clr3);
+    text-transform: uppercase;
+    text-align: center;
+    align-items: center;
+    letter-spacing: .2rem;
+    background: var(--clr1);
+}
+
+.b1{
+    margin-top: 2rem;
+    padding: 1.3rem 4rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    color:white;
+    background-color:#7227D5;
+    border: none;
+    box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.b1:hover {
+    transform: translateY(-1rem);
+    transition: all .5s ease;
+}
+
+.title {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: .2rem;
+}
+
+.title span {
+    color: var(--clr2);
+    font-size: 4rem;
+}
+
+.title p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--clr4);
+}
+body{
+
+font-family: 'Poppins', sans-serif;
+height:100vh;
+width:100vw;
+background-color: #f3eef2;
+display:flex;
+justify-content: center;
+align-items: center;
+}
+#result{
+    color: red;
+}
+
+</style>
+
+<body>
+ 
+  <header class="head">i cl
+    <a href="#" class="logo">
+    <nav class="navbar ">
+        <a href="full app.html">Home</a>
+        <a href="full app.html">Service</a>
+        <a href="full app.html">Vendors</a>
+        <a href="full app.html">Venue</a>
+        <a href="full app.html">E-invites</a>
+        <a href="full app.html">Contact</a>
+        <a href="login.html">log in</a>
+    </nav>
+    <div id="menu-bar"><i class="fas fa-bars"></i></div>
+</header>
+
+  <div class="card">
+    <div class="image">
+      <div class="overlay">
+
+      </div>
+      </div>
+    <div class="form">
+     <form action=" " name="formfill" onsubmit="return validation()">
+    
+    <h3><b>Register Here</b> </h3>
+<p id="result"></p>
+    <div class="input-field">
+        <i class="fa fa-user"></i>
+        <input type="text" placeholder="Enter your Name" required/>
+    </div>
+    <div class="input-field">
+      <i class="fa fa-map-marker"></i>
+     <input type="text" placeholder="Enter your city" required/>
+  </div>
+  <div class="input-field">
+    <i class="fa fa-industry"></i>
+    <input type="text" placeholder="select vendor Type" required/>
+</div>
+
+<div class="input-field">
+    <i class="fa fa-envelope"></i>
+    <input type="email" placeholder="Email" required/>
+</div>
+
+<div class="input-field">
+    <i class="fa fa-phone"></i>
+    <input type="number" placeholder="+91" required/>
+</div>
+
+<div class="input-field">
+    <i class="fa fa-lock"></i>
+    <input type="password" placeholder="Enter your password" required/>
+</div>
+<div>
+    <input type="submit" name="submit" class="b1" value="Register"/>
+</div>    
+    
+    </div>
+  </div>
+    
+  </div>
+</form>
+  <script src="registerpage.js"></script>
+</body>
+</html>
